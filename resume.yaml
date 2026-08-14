@@ -1,0 +1,52 @@
+name: Maxime Delhaye
+title: Junior C Systems Programmer
+contact:
+  location: 1348, Louvain-la-Neuve Belgium
+  phone: "+32 470 35 44 52"
+  email: maxime.delhaye.md@gmail.com
+  github: github.com/friphazeph
+  cv_url: friphazeph.github.io/resume/CV.pdf
+
+summary: >
+  Civil Engineering student specializing in Computer Science at UCLouvain, with professional experience 
+  developing C and Python systems for LLM integrations. Focused on low-level programming, performance-conscious 
+  design, secure command execution, agent orchestration, and retrieval-augmented generation. Experienced in 
+  interoperability, static recompilation, and binary execution through personal C and assembly projects.
+
+skills:
+  languages: [C, Python, Assembly (6502/FASM), SQL]
+  systems: [Low-Level Programming, Static Recompilation, Intermediate-Language Design, Cross-Compilation, Linux/POSIX, GCC, Make, GDB, Git]
+  ai_data: [LLM Integrations, Agent Orchestration, Retrieval-Augmented Generation (RAG), REST APIs]
+  design: [Algorithm Design, Data-Oriented Design, Security-Focused Architecture]
+
+experience:
+  - role: C + Python Developer for LLM (AI) integrations
+    company: ProofPilot
+    period: "July 2025 – Feb 2026"
+    highlights:
+      - Designed an intermediate language and low-level C communication layer for LLM tool use, enabling machine-command execution without software sandboxing while maintaining a performance-focused architecture.
+      - Built an internal Python API to orchestrate specialized agents, integrating the C-based infrastructure into an onboarding system.
+      - Implemented a Python retrieval-augmented generation (RAG) system connected through an API to Dropbox environments, enabling multi-process ingestion and querying of remote cloud data.
+
+projects:
+  - name: LLINAL
+    tech: C
+    url: github.com/friphazeph/llinal
+    description: Developed an ultra-lightweight LLM-to-machine bridge in C designed for secure command execution without software sandboxing.
+  - name: natemu
+    tech: C
+    status: In Development
+    description: Developing a static recompiler that translates MOS 6502 machine code directly into clean, portable C code.
+
+education:
+  - degree: Civil Engineering in Computer Science
+    institution: UCLouvain
+    location: Louvain-la-Neuve, Belgium
+    period: "2022 – Present"
+
+languages:
+  - name: English
+    level: Fluent
+  - name: French
+    level: Native
+
