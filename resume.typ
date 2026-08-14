@@ -6,20 +6,20 @@
 
 #set page(
   paper: "a4",
-  margin: (top: 0cm, bottom: 1.5cm, left: 1.8cm, right: 1.8cm)
+  margin: (top: 0cm, bottom: 1.2cm, left: 1.8cm, right: 1.8cm)
 )
 #set text(
   font: "Liberation Sans",
   size: 9.5pt,
   fill: text-color
 )
-#set par(justify: true, leading: 0.55em)
+#set par(justify: true, leading: 0.52em)
 
 // --- PINK HEADER BANNER ---
 #block(
   fill: primary-color,
   width: 100% + 3.6cm,
-  inset: (x: 1.8cm, y: 1.8cm),
+  inset: (x: 1.8cm, y: 1.6cm),
   outset: (x: 1.8cm, top: 0cm),
 )[
   #text(18pt, weight: "bold", fill: white)[#data.name] \
@@ -32,31 +32,31 @@
   ]
 ]
 
-#v(0.8em)
+#v(0.6em)
 
 // --- SUMMARY ---
 #text(data.summary)
 
-#v(0.8em)
+#v(0.6em)
 
 // --- TECHNICAL SKILLS ---
-#text(12pt, weight: "bold", fill: primary-color)[Skills]
-#v(-4pt)
+#text(11pt, weight: "bold", fill: primary-color)[Skills]
+#v(-5pt)
 #line(length: 100%, stroke: 0.5pt + primary-color)
-#v(2pt)
+#v(1pt)
 
 - *Languages:* #data.skills.languages.join(", ")
 - *Systems & Toolchain:* #data.skills.systems.join(", ")
 - *AI & Data:* #data.skills.ai_data.join(", ")
 - *Design & Architecture:* #data.skills.design.join(", ")
 
-#v(0.8em)
+#v(0.6em)
 
 // --- WORK HISTORY ---
-#text(12pt, weight: "bold", fill: primary-color)[Work History]
-#v(-4pt)
+#text(11pt, weight: "bold", fill: primary-color)[Work History]
+#v(-5pt)
 #line(length: 100%, stroke: 0.5pt + primary-color)
-#v(2pt)
+#v(1pt)
 
 #for job in data.experience [
   #grid(
@@ -64,19 +64,19 @@
     [*#job.role*], [#text(gray)[#job.period]]
   )
   #text(style: "italic")[#job.company]
-  #v(2pt)
+  #v(1pt)
   #for item in job.highlights [
     - #item
   ]
 ]
 
-#v(0.8em)
+#v(0.6em)
 
 // --- PROJECTS / ACCOMPLISHMENTS ---
-#text(12pt, weight: "bold", fill: primary-color)[Accomplishments & Projects]
-#v(-4pt)
+#text(11pt, weight: "bold", fill: primary-color)[Accomplishments & Projects]
+#v(-5pt)
 #line(length: 100%, stroke: 0.5pt + primary-color)
-#v(2pt)
+#v(1pt)
 
 #for proj in data.projects [
   #grid(
@@ -89,17 +89,19 @@
     []
   )
   #v(1pt)
-  #proj.description
-  #v(4pt)
+  #for item in proj.highlights [
+    - #item
+  ]
+  #v(2pt)
 ]
 
-#v(0.8em)
+#v(0.4em)
 
 // --- EDUCATION ---
-#text(12pt, weight: "bold", fill: primary-color)[Education]
-#v(-4pt)
+#text(11pt, weight: "bold", fill: primary-color)[Education]
+#v(-5pt)
 #line(length: 100%, stroke: 0.5pt + primary-color)
-#v(2pt)
+#v(1pt)
 
 #for edu in data.education [
   #grid(
@@ -109,7 +111,7 @@
   #edu.institution, #edu.location
 ]
 
-#v(0.8em)
+#v(0.6em)
 
 // --- LANGUAGES ---
 #text(12pt, weight: "bold", fill: primary-color)[Languages]

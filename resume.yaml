@@ -8,35 +8,41 @@ contact:
   cv_url: friphazeph.github.io/resume/CV.pdf
 
 summary: >
-  Civil Engineering student specializing in Computer Science at UCLouvain, with professional experience
-  developing C and Python systems for LLM integrations. Focused on low-level programming, performance-conscious
-  design, secure command execution, agent orchestration, and retrieval-augmented generation. Experienced in
-  interoperability, static recompilation, and binary execution through personal C and assembly projects.
+  Computer Science-focused Civil Engineering student at UCLouvain with professional experience
+  developing C and Python systems for LLM integrations. Focused on low-level programming,
+  performance-conscious design, agent orchestration, and retrieval-augmented generation, with
+  personal projects in static recompilation, binary translation, assembly, and C-native runtime execution.
 
 skills:
   languages: [C, Python, Assembly (6502/FASM), SQL, Java]
-  systems: [Low-Level Programming, Static Recompilation, Intermediate-Language Design, Cross-Compilation, Linux/POSIX, GCC, Make, GDB, Git]
-  ai_data: [LLM Integrations, Agent Orchestration, Retrieval-Augmented Generation (RAG), REST APIs]
-  design: [Algorithm Design, Data-Oriented Design, Security-Focused Architecture]
+  systems: [Low-Level Programming, Static Binary Translation, Control-Flow Graphs (CFG), Custom Memory Management (Arena/Pool Allocators), Linux/POSIX, GCC, Make, GDB, Git, CI/CD]
+  ai_data: [LLM Integrations, Agent Orchestration, Retrieval-Augmented Generation (RAG), REST APIs, Multiprocessing]
+  design: [Algorithm Design, Data-Oriented Design, Allowlist-Driven Architecture, Intermediate-Language Design, Debugging & Performance Optimization]
 
 experience:
   - role: C + Python Developer for LLM (AI) integrations
     company: ProofPilot
     period: "July 2025 – Feb 2026"
     highlights:
-      - Designed an intermediate language and low-level C communication layer for LLM tool use, enabling machine-command execution without software sandboxing while maintaining a performance-focused architecture.
-      - Built an internal Python API to orchestrate specialized agents, integrating the C-based infrastructure into an onboarding system.
-      - Implemented a Python retrieval-augmented generation (RAG) system connected through an API to Dropbox environments, enabling multi-process ingestion and querying of remote cloud data.
+      - Addressed the challenge of connecting LLM tool use to machine commands by designing an intermediate language and low-level C communication layer, enabling execution without software sandboxing in a performance-focused architecture.
+      - Built an internal Python API for orchestrating specialized agents and integrated it with the C-based infrastructure to support an onboarding system.
+      - Implemented a Python retrieval-augmented generation (RAG) system connected to Dropbox environments through an API, enabling multi-process ingestion and querying of remote cloud data.
+      - The RAG architecture allowed for around 2TB of raw data to be indexed without massive local storage overhead and server costs.
 
 projects:
-  - name: LLINAL
-    tech: C
-    url: github.com/friphazeph/llinal
-    description: Developed an ultra-lightweight LLM-to-machine bridge in C designed for secure command execution without software sandboxing.
+  - name: LLinal
+    tech: C / Shared Objects
+    url: github.com/friphazeph/LLinal
+    highlights:
+      - Architected an allowlist-driven execution runtime in C using dynamic linking (dlopen/dlsym), exposing safe C functions to LLMs while enforcing zero-trust default boundaries.
+      - Built a custom preprocessor and parser for strict ABI/type signature verification prior to symbol execution, preventing arbitrary code injection without virtualization overhead.
+
   - name: natemu
-    tech: C
+    tech: C / MOS 6502
     status: In Development
-    description: Developing a static recompiler that translates MOS 6502 machine code directly into clean, portable C code.
+    highlights:
+      - Built a multi-pass static binary translator in C that parses MOS 6502 machine code, constructs control-flow graphs (CFGs), and performs dead-code pruning.
+      - Designed an Ahead-Of-Time (AOT) C codegen pipeline emitting statically dispatched native functions with a hybrid interpreter fallback, backed by custom arena allocators and mmap.
 
 education:
   - degree: Civil Engineering in Computer Science
@@ -51,4 +57,3 @@ languages:
     level: Native
   - name: Dutch
     level: Intermediate
-
