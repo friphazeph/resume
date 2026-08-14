@@ -31,8 +31,8 @@ jobs:
 
       - name: Compile Resume PDF
         run: |
-          mkdir -p public/resume
-          typst compile resume.typ public/resume/CV.pdf
+          mkdir -p public
+          typst compile resume.typ public/CV.pdf
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
