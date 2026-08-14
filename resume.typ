@@ -118,7 +118,7 @@
 #v(2pt)
 
 #grid(
-  columns: (1fr, 1fr),
+  columns: (1fr, 1fr, 1fr),
   ..data.languages.map(lang => [
     *#lang.name:* #lang.level
   ])
