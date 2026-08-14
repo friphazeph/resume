@@ -6,7 +6,13 @@ on:
       - main
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   build-and-deploy:
@@ -21,11 +27,15 @@ jobs:
           typst-version: latest
 
       - name: Compile Resume PDF
-        run: typst compile resume.typ CV.pdf
+        run: |
+          mkdir -p public/resume
+          typst compile resume.typ public/resume/CV.pdf
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
-          destination_dir: resume
+        id: deployment
+        uses: actions/deploy-pages@v4
