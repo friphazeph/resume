@@ -5,7 +5,8 @@
 #let text-color = rgb("#1a1a1a")
 
 #set page(
-  paper: "a4",
+  width: 210mm,
+  height: auto,
   margin: (top: 0cm, bottom: 1.2cm, left: 1.8cm, right: 1.8cm)
 )
 #set text(
