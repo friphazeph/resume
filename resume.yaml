@@ -14,7 +14,7 @@ summary: >
   interoperability, static recompilation, and binary execution through personal C and assembly projects.
 
 skills:
-  languages: [C, Python, Assembly (6502/FASM), SQL]
+  languages: [C, Python, Assembly (6502/FASM), SQL, Java]
   systems: [Low-Level Programming, Static Recompilation, Intermediate-Language Design, Cross-Compilation, Linux/POSIX, GCC, Make, GDB, Git]
   ai_data: [LLM Integrations, Agent Orchestration, Retrieval-Augmented Generation (RAG), REST APIs]
   design: [Algorithm Design, Data-Oriented Design, Security-Focused Architecture]
