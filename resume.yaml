@@ -20,14 +20,13 @@ skills:
   design: [Algorithm Design, Data-Oriented Design, Allowlist-Driven Architecture, Intermediate-Language Design, Debugging & Performance Optimization]
 
 experience:
-  - role: C + Python Developer for LLM (AI) integrations
+  - role: Systems & AI Infrastructure Engineer / C + Python Developer
     company: ProofPilot
     period: "July 2025 – Feb 2026"
     highlights:
-      - Addressed the challenge of connecting LLM tool use to machine commands by designing an intermediate language and low-level C communication layer, enabling execution without software sandboxing in a performance-focused architecture.
-      - Built an internal Python API for orchestrating specialized agents and integrated it with the C-based infrastructure to support an onboarding system.
-      - Implemented a Python retrieval-augmented generation (RAG) system connected to Dropbox environments through an API, enabling multi-process ingestion and querying of remote cloud data.
-      - The RAG architecture allowed for around 2TB of raw data to be indexed without massive local storage overhead and server costs.
+      - Served as the primary backend engineer owning the end-to-end AI infrastructure; designed an intermediate language and C-native communication layer to safely execute LLM commands at native speeds.
+      - Architected and built an internal Python API for orchestrating specialized agents, integrating it with the low-level C runtime to power the client onboarding system.
+      - Engineered a multi-process Python RAG backend interfacing with Dropbox cloud environments, indexing ~2TB of remote data without local storage overhead or expensive server compute.
 
 projects:
   - name: LLinal
