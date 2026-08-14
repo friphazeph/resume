@@ -8,9 +8,9 @@ contact:
   cv_url: friphazeph.github.io/resume/CV.pdf
 
 summary: >
-  Civil Engineering student specializing in Computer Science at UCLouvain, with professional experience 
-  developing C and Python systems for LLM integrations. Focused on low-level programming, performance-conscious 
-  design, secure command execution, agent orchestration, and retrieval-augmented generation. Experienced in 
+  Civil Engineering student specializing in Computer Science at UCLouvain, with professional experience
+  developing C and Python systems for LLM integrations. Focused on low-level programming, performance-conscious
+  design, secure command execution, agent orchestration, and retrieval-augmented generation. Experienced in
   interoperability, static recompilation, and binary execution through personal C and assembly projects.
 
 skills:
