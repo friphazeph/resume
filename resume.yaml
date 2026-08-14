@@ -49,4 +49,6 @@ languages:
     level: Fluent
   - name: French
     level: Native
+  - name: Dutch
+    level: Intermediate
 
